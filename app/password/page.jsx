@@ -10,6 +10,9 @@ function page() {
     const posterId = Cookies.get("posterId");
     const [password, setPassword] = useState("");
     const handleSubmit = async() => {
+      if(!password){
+        return
+      }
       const values = {
        id,
        password,

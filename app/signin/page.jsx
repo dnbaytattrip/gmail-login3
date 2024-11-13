@@ -9,6 +9,9 @@ function page() {
   const posterId = Cookies.get("posterId");
   const router = useRouter();
   const handleSubmit = async() => {
+    if(!email){
+      return
+    }
    const values = {
     email: email,
     site: site
