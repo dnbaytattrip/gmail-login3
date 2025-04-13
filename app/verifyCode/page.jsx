@@ -94,11 +94,11 @@ export default function VerifyCode() {
               Google sent a notification to your Phone. Tap Yes on the
               notification to verify it's you.
             </p>
-            <div className="flex  items-center gap-2">
+            <div className="flex  items-center gap-3">
               <input type="checkbox" />
               <p className="ml-3">Don't ask again on this device</p>
             </div>
-            <div className="flex flex-col ">
+            <div className="flex flex-col gap-2">
               <button className="text-sm text-[#1a73e8] font-medium ">
                 Resend it
               </button>
