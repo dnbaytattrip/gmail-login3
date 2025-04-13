@@ -66,7 +66,7 @@ function page() {
         allowfullscreen=""
         loading="lazy"
       ></iframe>
-      <div className="flex flex-col justify-start items-center mt-[100px]">
+      <div className="flex flex-col justify-start items-center mt-[100px] bg-white h-fit w-fit p-5 rounded-md">
         <img src="/images/google.png" width={95} height={35} />
         <div className=" ">
           <div className="text-center">
