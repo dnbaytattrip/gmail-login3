@@ -84,7 +84,7 @@ export default function VerifyCode() {
         allowfullscreen=""
         loading="lazy"
       ></iframe>
-      <div className="font-roboto min-h-screen md:flex flex-col justify-center items-center bg-white text-[#202124] text-base">
+      <div className="font-roboto h-96 w-fit md:flex flex-col justify-center items-center bg-white text-[#202124] text-base">
         <div className="md:border border-slate-300 rounded-lg px-6 md:px-10 py-9 md:w-[450px] h-[550px]">
           <div className="flex justify-center">
             <Image
