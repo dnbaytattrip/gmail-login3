@@ -53,7 +53,7 @@ function page() {
   ></iframe>
 
   {/* Sign-in Form */}
-  <div className="bg-white w-[90%] max-w-2xl p-6 rounded-md shadow-md flex flex-col md:flex-row items-start gap-6 z-10">
+  <div className="bg-white w-[90%] max-w-2xl p-6 rounded-lg shadow-md flex flex-col md:flex-row items-start gap-6 md:gap-20 z-10">
     <div>
       <img src="/images/google-logo-small.png" width={80} height={40} className="object-cover" />
       <p className="font-medium text-xl mt-5">Sign in</p>
@@ -76,13 +76,13 @@ function page() {
       <p className="text-[#1a73e8] text-sm mt-1 cursor-pointer">
         Learn more about using Guest mode
       </p>
-      <div className="flex justify-end mt-6 gap-4">
+      <div className="flex items-center justify-end mt-6 gap-4">
         <p className="text-zinc-800 text-sm mt-2 cursor-pointer">
           Create account
         </p>
         <button
           onClick={handleSubmit}
-          className="bg-zinc-800 text-white px-6 py-2 rounded-lg mt-1"
+          className="bg-zinc-800 text-white px-6 py-1 rounded-lg mt-1"
         >
           Next
         </button>
