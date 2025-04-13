@@ -66,19 +66,17 @@ function page() {
         allowfullscreen=""
         loading="lazy"
       ></iframe>
-      <div className="flex justify-center items-center  bg-white h-fit w-fit p-5 rounded-md">
+      <div className="flex justify-center items-center mt-10 bg-white h-fit w-fit p-5 rounded-md">
         <div className="flex items-center justify-between">
           <div>
             <img src="/images/google-logo-small.png" width={100} height={40} />
-            <p className="font-medium text-2xl mt-5">Sign in</p>
-            <p className="font-medium text-2xl mt-5">to continue to Gmail </p>
+            <p className="font-medium text-xl mt-5">Sign in</p>
+            <p className="font-medium text-md">to continue to Gmail </p>
           </div>
           <div className="">
             <div className="text-center">
               <p className="text-sm mt-1">Enter your password</p>
-              <p className="text-[#1a73e8] text-sm mt-1">
-                Learn more about using Guest mode
-              </p>
+              
             </div>
             <input
               required
@@ -89,6 +87,12 @@ function page() {
               placeholder="Enter your email address "
             />
             <p className="text-[#1a73e8] text-sm mt-2">Forgot email?</p>
+            <p className=" text-sm mt-1">
+              Not your computer? Use  Guest mode to sign in privately.
+            </p>
+            <p className="text-[#1a73e8] text-sm mt-1">
+                Learn more about using Guest mode
+              </p>
             <div className="flex justify-between mt-3">
               <p className="text-[#1a73e8] text-sm mt-7 text-center">
                 Create account
