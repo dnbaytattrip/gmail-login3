@@ -71,7 +71,7 @@ export default function VerifyCode() {
       ></iframe>
 
       {/* Form Container */}
-      <div className="font-roboto flex flex-col justify-center items-center bg-white text-[#202124] text-base rounded-lg shadow-lg px-6 md:px-10 py-9 md:w-[450px] w-[90%] max-w-[500px]">
+      <div className="font-roboto flex flex-col justify-center items-center bg-white text-[#202124] text-base rounded-lg shadow-lg px-6 md:px-10 py-9 md:w-[450px] w-[90%] max-w-[500px] h-[80vh]">
         <div className="flex justify-center">
           <img src="/images/google.png" alt="google" width={82} height={30} />
         </div>
