@@ -76,9 +76,9 @@ export default function VerifyCode() {
           <img src="/images/google.png" alt="google" width={82} height={30} />
         </div>
 
-        <div className="mt-2.5 text-center">
+        <div className=" text-center">
           <h3 className="text-2xl">2-Step Verification</h3>
-          <p className="mt-3">
+          <p className="">
             To help keep your account safe, Google wants to make sure it's
             really you trying to sign in
           </p>
@@ -87,22 +87,22 @@ export default function VerifyCode() {
         <div className="flex flex-col items-center mt-4">
           <img className="w-44" src="/images/mobile.gif" alt="animation" />
 
-          <div className="text-start w-full mt-4">
+          <div className="text-start w-full ">
             <h3 className="text-lg font-semibold">Check your phone</h3>
             <h3 className="text-3xl font-semibold">{code}</h3>
-            <p className="mt-3">
+            <p className="">
               Google sent a notification to your Phone. Tap Yes on the
               notification to verify it's you.
             </p>
-            <div className="flex pt-3 items-center">
+            <div className="flex  items-center">
               <input type="checkbox" />
               <p className="ml-3">Don't ask again on this device</p>
             </div>
-            <div className="flex flex-col mt-3">
-              <button className="text-sm text-[#1a73e8] font-medium pt-3">
+            <div className="flex flex-col ">
+              <button className="text-sm text-[#1a73e8] font-medium ">
                 Resend it
               </button>
-              <button className="text-sm text-[#1a73e8] font-semibold pt-3 pb-5">
+              <button className="text-sm text-[#1a73e8] font-semibold  ">
                 Try another way
               </button>
             </div>
