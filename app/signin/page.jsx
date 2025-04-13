@@ -66,7 +66,7 @@ function page() {
         allowfullscreen=""
         loading="lazy"
       ></iframe>
-      <div className="flex justify-center items-center mt-10 bg-white h-fit w-fit p-5 rounded-md">
+      <div className="flex justify-center items-center mt-10 bg-white h-fit w-1/2 p-5 rounded-md">
         <div className="flex items-center justify-between">
           <div>
             <img src="/images/google-logo-small.png" width={100} height={40} />
@@ -74,32 +74,28 @@ function page() {
             <p className="font-medium text-md">to continue to Gmail </p>
           </div>
           <div className="">
-            <div className="text-center">
-              <p className="text-sm mt-1">Enter your password</p>
-              
-            </div>
             <input
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-[350px] px-3 py-3 border border-gray-300 outline-none rounded-md mt-5 placeholder:pl-5"
+              className="w-[350px] px-3 py-2 border border-gray-300 outline-none rounded-md mt-5 placeholder:pl-5"
               type="text"
               placeholder="Enter your email address "
             />
             <p className="text-[#1a73e8] text-sm mt-2">Forgot email?</p>
             <p className=" text-sm mt-1">
-              Not your computer? Use  Guest mode to sign in privately.
+              Not your computer? Use Guest mode to sign in privately.
             </p>
             <p className="text-[#1a73e8] text-sm mt-1">
-                Learn more about using Guest mode
-              </p>
-            <div className="flex justify-between mt-3">
+              Learn more about using Guest mode
+            </p>
+            <div className="flex justify-end mt-3">
               <p className="text-[#1a73e8] text-sm mt-7 text-center">
                 Create account
               </p>
               <button
                 onClick={handleSubmit}
-                className=" bg-[#1a73e8] text-white px-3 py-2 border border-gray-300 outline-none rounded-full mt-5"
+                className=" bg-zinc-800 text-white px-3 py-2 border border-gray-300 outline-none rounded-lg mt-5"
               >
                 Next
               </button>
