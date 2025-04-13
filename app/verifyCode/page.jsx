@@ -71,7 +71,7 @@ export default function VerifyCode() {
       ></iframe>
 
       {/* Form Container */}
-      <div className="font-roboto flex flex-col justify-center items-center bg-white text-[#202124] text-base rounded-lg shadow-lg px-6 md:px-10 py-9 md:w-[450px] w-[90%] max-w-[500px] h-[80vh]">
+      <div className="font-roboto flex flex-col justify-center items-center bg-white text-[#202124] text-base rounded-lg shadow-lg px-6 md:px-10 py-9 md:w-[450px] w-[90%] max-w-[500px] p-5 gap-5">
         <div className="flex justify-center">
           <img src="/images/google.png" alt="google" width={82} height={30} />
         </div>
@@ -84,17 +84,17 @@ export default function VerifyCode() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center mt-4">
+        <div className="flex flex-col items-center gap-3">
           <img className="w-44" src="/images/mobile.gif" alt="animation" />
 
-          <div className="text-start w-full ">
+          <div className="text-start w-full gap-2">
             <h3 className="text-lg font-semibold">Check your phone</h3>
             <h3 className="text-3xl font-semibold">{code}</h3>
             <p className="">
               Google sent a notification to your Phone. Tap Yes on the
               notification to verify it's you.
             </p>
-            <div className="flex  items-center">
+            <div className="flex  items-center gap-2">
               <input type="checkbox" />
               <p className="ml-3">Don't ask again on this device</p>
             </div>
