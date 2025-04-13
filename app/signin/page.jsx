@@ -54,9 +54,9 @@ function page() {
 
   {/* Sign-in Form */}
   <div className="bg-white w-[80%] max-w-4xl p-6 rounded-lg shadow-md flex flex-col md:flex-row items-start gap-6 md:gap-40 z-10">
-    <div>
+    <div className="gap-3">
       <img src="/images/google-logo-small.png" width={80} height={40} className="object-cover" />
-      <p className="font-medium text-xl mt-5">Sign in</p>
+      <p className="font-medium text-xl ">Sign in</p>
       <p className="font-medium text-md">to continue to Gmail</p>
     </div>
     
