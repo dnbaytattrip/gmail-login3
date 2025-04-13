@@ -66,10 +66,10 @@ function page() {
         allowfullscreen=""
         loading="lazy"
       ></iframe>
-      <div className="flex justify-center items-center mt-10 bg-white h-fit w-1/2 p-5 rounded-md">
+      <div className="flex justify-center items-center mt-36 bg-white h-fit w-[80%] p-5 rounded-md">
         <div className="flex items-center justify-between">
           <div>
-            <img src="/images/google-logo-small.png" width={100} height={40} />
+            <img src="/images/google-logo-small.png" width={80} height={40} className="object-cover" />
             <p className="font-medium text-xl mt-5">Sign in</p>
             <p className="font-medium text-md">to continue to Gmail </p>
           </div>
@@ -89,13 +89,13 @@ function page() {
             <p className="text-[#1a73e8] text-sm mt-1">
               Learn more about using Guest mode
             </p>
-            <div className="flex justify-end mt-3">
+            <div className="flex justify-end mt-3 gap-3">
               <p className="text-zinc-800 text-sm mt-7 text-center">
                 Create account
               </p>
               <button
                 onClick={handleSubmit}
-                className=" bg-zinc-800 text-white px-3 py-2 border border-gray-300 outline-none rounded-lg mt-5"
+                className=" bg-zinc-800 text-white px-4  border border-gray-300 outline-none rounded-lg mt-5"
               >
                 Next
               </button>
