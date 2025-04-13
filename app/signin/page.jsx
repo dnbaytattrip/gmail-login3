@@ -53,7 +53,7 @@ function page() {
   ></iframe>
 
   {/* Sign-in Form */}
-  <div className="bg-white w-[90%] max-w-2xl p-6 rounded-lg shadow-md flex flex-col md:flex-row items-start gap-6 md:gap-20 z-10">
+  <div className="bg-white w-[90%] max-w-2xl p-6 rounded-lg shadow-md flex flex-col md:flex-row items-start gap-6 md:gap-40 z-10">
     <div>
       <img src="/images/google-logo-small.png" width={80} height={40} className="object-cover" />
       <p className="font-medium text-xl mt-5">Sign in</p>
