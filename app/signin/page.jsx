@@ -90,7 +90,7 @@ function page() {
               Learn more about using Guest mode
             </p>
             <div className="flex justify-end mt-3">
-              <p className="text-[#1a73e8] text-sm mt-7 text-center">
+              <p className="text-zinc-800 text-sm mt-7 text-center">
                 Create account
               </p>
               <button
