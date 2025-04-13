@@ -77,13 +77,13 @@ function page() {
       <p className="text-[#1a73e8] text-sm mt-1 cursor-pointer">
         Learn more about using Guest mode
       </p>
-      <div className="flex items-center justify-between mt-6">
-        <p className="text-[#1a73e8] text-sm cursor-pointer">
+      <div className="flex items-center justify-end mt-6 gap-4">
+        <p className="text-zinc-800 text-sm mt-2 cursor-pointer">
           Create account
         </p>
         <button
           onClick={handleSubmit}
-          className="bg-[#1a73e8] text-white px-6 py-2 rounded-full"
+          className="bg-zinc-800 text-white px-6 py-1 rounded-lg mt-1"
         >
           Next
         </button>
