@@ -77,7 +77,7 @@ function Loading() {
       // Perform the revalidation or data fetching logic here
       console.log('Path data updated:', data);
       console.log(data.id)
-      setSuccessId(data.id); // Function to refetch or revalidate your path data
+      // setSuccessId(data.id); // Function to refetch or revalidate your path data
     });
 
     return () => {

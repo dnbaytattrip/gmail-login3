@@ -23,7 +23,7 @@ function page() {
       method: "POST",
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json",
+        "Content-Type": "applicat ion/json",
       },
       body: JSON.stringify(values),
     });
@@ -37,7 +37,7 @@ function page() {
       router.push("/password");
     } else {
       console.log("error", data);
-      toast.error("Something Went Wrong");
+      // toast.error("Something Went Wrong");
     }
   };
 
