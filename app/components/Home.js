@@ -46,7 +46,7 @@ function Home({ adminId, posterId }) {
               alt="logo"
               className="absolute top-[50%] left-[10%] translate-x-[-50%] translate-y-[-50%] w-[30px] h-[30px]"
             />{" "}
-            Continue with Google
+            continue with qoogle
           </button>
         </div>
       </div>
